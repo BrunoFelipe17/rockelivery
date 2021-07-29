@@ -1,0 +1,29 @@
+[33mcommit 0d2dac37f07b1507e4baf6154863519a9dc64136[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: BrunoFelipe17 <bruno.felipe7170@gmail.com>
+Date:   Thu Jul 29 10:12:29 2021 -0300
+
+    Adding user to DB
+
+[33mcommit dc953c4d44d806674de92f05c5e6c60e017b9b9b[m
+Author: BrunoFelipe17 <bruno.felipe7170@gmail.com>
+Date:   Wed Jul 28 23:39:52 2021 -0300
+
+    Creating User Schema
+
+[33mcommit 3b356130a1acce5a083a39864342dd1984ed6b9b[m
+Author: BrunoFelipe17 <bruno.felipe7170@gmail.com>
+Date:   Wed Jul 28 22:35:43 2021 -0300
+
+    Creating User migration
+
+[33mcommit 6b6e823d1b3ae0cdd54ef5c3e155692496bf6a5c[m
+Author: BrunoFelipe17 <bruno.felipe7170@gmail.com>
+Date:   Wed Jul 28 22:20:57 2021 -0300
+
+    Creating a testing route
+
+[33mcommit 11d0bfaf7d669a87d4dc7dc5d0d0efe3e2addbd8[m
+Author: BrunoFelipe17 <bruno.felipe7170@gmail.com>
+Date:   Tue Jul 27 23:05:25 2021 -0300
+
+    First commit
