@@ -12,19 +12,11 @@ defmodule Rockelivery.UserTest do
 
       response = User.changeset(params)
 
-      assert %Changeset{changes: %{name: "Bruno"}, valid?: false} = response
+      assert %Changeset{changes: %{name: "Bruno"}, valid?: true} = response
     end
 
     test "when updating a changeset, returns a valid changeset with the given changes" do
-      params = %{
-        age: 22,
-        address: "Rua do Léo",
-        cep: "1234500",
-        cpf: "12345678900",
-        email: "b@b.com",
-        password: "123456",
-        name: "Bruno"
-      }
+      params = build(:user_params)
 
       update_params = %{name: "Leonardo", password: "123456"}
 
@@ -33,19 +25,11 @@ defmodule Rockelivery.UserTest do
         |> User.changeset()
         |> User.changeset(update_params)
 
-      assert %Changeset{changes: %{name: "Leonardo"}, valid?: false} = response
+      assert %Changeset{changes: %{name: "Leonardo"}, valid?: true} = response
     end
 
     test "when there are some error, returns an invalid changeset" do
-      params = %{
-        age: 12,
-        address: "Rua do Léo",
-        cep: "1234500",
-        cpf: "12345678900",
-        email: "b@b.com",
-        password: "123",
-        name: "Bruno"
-      }
+      params = build(:user_params, %{age: 15, cep: "123", password: "123"})
 
       response = User.changeset(params)
 
