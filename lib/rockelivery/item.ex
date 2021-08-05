@@ -23,6 +23,6 @@ defmodule Rockelivery.Item do
     |> cast(params, @required_params)
     |> validate_required(@required_params)
     |> validate_length(:description, min: 6)
-    |> validate_number(:price, greathen_than: 0)
+    |> validate_number(:price, greater_than: 0)
   end
 end
