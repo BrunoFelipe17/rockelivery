@@ -16,7 +16,7 @@ defmodule RockeliveryWeb.ChannelCase do
   """
 
   use ExUnit.CaseTemplate
-  
+
   alias Ecto.Adapters.SQL.Sandbox
 
   using do
@@ -31,7 +31,7 @@ defmodule RockeliveryWeb.ChannelCase do
   end
 
   setup tags do
-    :ok = checkout(Rockelivery.Repo)
+    :ok = Sandbox.checkout(Rockelivery.Repo)
 
     unless tags[:async] do
       Sandbox.mode(Rockelivery.Repo, {:shared, self()})
