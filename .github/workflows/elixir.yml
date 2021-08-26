@@ -37,6 +37,10 @@ jobs:
         path: deps
         key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
         restore-keys: ${{ runner.os }}-mix-
+    - name: Check for matching
+      run: mix format --check-formatted
+    - name: Run credo
+      run: mix credo --strict
     - name: Install dependencies
       run: mix deps.get
     - name: Run tests
